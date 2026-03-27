@@ -8,12 +8,11 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 3000,
       host: 'localhost',
-      open: true,
     },
     plugins: [],
     define: {
-      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY || null),
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || null)
+      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY || ""),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || "")
     },
     resolve: {
       alias: {
